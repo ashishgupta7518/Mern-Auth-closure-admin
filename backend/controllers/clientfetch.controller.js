@@ -45,3 +45,31 @@ export const getClientByCode = (req, res) => {
     res.status(500).json({ message: "Error reading Excel file", error: error.message });
   }
 };
+
+
+export const loginByClientcode = (req, res) => {
+  try {
+    const clientcode = req.params.clientcode?.toLowerCase();
+    const staticcode = req.params.staticcode?.toLowerCase();
+
+    // Validate static code
+    if (staticcode !== "444444") {
+      return res.status(401).json({ message: "Invalid static code" });
+    }
+
+    const data = readExcelFile();
+
+    const result = data.find(
+      (row) => row.clientcode && String(row.clientcode).toLowerCase() === clientcode
+    );
+
+    if (!result) {
+      return res.status(404).json({ message: "Clientcode not found" });
+    }
+
+    res.status(200).json("login successful");
+    
+  } catch (error) {
+    res.status(500).json({ message: "Error reading Excel file", error: error.message });
+  }
+};

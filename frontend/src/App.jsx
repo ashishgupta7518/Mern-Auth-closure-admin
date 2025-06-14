@@ -31,6 +31,9 @@ import SmsEditor from "./Routes/SmsEditor";
 import NewPdfEditor from "./Routes/NewPdfEditor";
 import CmrUpload from "./Routes/CmrUpload";
 import AddDomain from "./Routes/AddDomain";
+import ClientLogin from "./pages/ClientLogin";
+import Consent from "./pages/Consent";
+import Success from "./pages/Success";
 
 // Auth guards
 const ProtectedRoute = ({ children }) => {
@@ -189,6 +192,31 @@ function App() {
               <DashboardLayout>
                 <AddDomain />
               </DashboardLayout>
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/login/client"
+          element={
+            <ProtectedRoute>
+              <ClientLogin/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/login/client/:clientcode"
+          element={
+            <ProtectedRoute>
+              <Consent/>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/login/client/:clientcode/success"
+          element={
+            <ProtectedRoute>
+              <Success/>
             </ProtectedRoute>
           }
         />

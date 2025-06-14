@@ -14,8 +14,8 @@ const Navbar = () => {
     <div className="h-[60px] bg-white shadow-md  px-6 flex items-center justify-between w-full">
       {/* Left: Button */}
       <NavLink
-        to="https://closure.meon.co.in/admin/SUNIDHI"
-        target="_blank"
+        to="/login/client"
+        
         className="bg-[#0095ff] text-white text-sm font-medium py-2 px-6   rounded shadow hover:bg-[#07c] focus:outline-none focus:ring-4 focus:ring-blue-200 active:bg-[#0064bd]"
       >
         Test

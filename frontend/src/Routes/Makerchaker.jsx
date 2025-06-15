@@ -19,6 +19,9 @@ const MakerChecker = () => {
     "dob",
     "networth",
     "aadhar_no",
+    "stage",
+    "mobile_no",
+    "father_name",
   ];
 
 

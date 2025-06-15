@@ -99,9 +99,9 @@ const ClientLogin = () => {
                         >
                             Download PDF
                         </button>
-                        <Button  onClick={()=>handlenext()}>
+                        <Button  className="bg-blue-600 text-white p-2 rounded  hover:bg-blue-700 transition duration-300" onClick={()=>handlenext()}>
         Proceed
-        <HiOutlineArrowRight className="ml-2 mt-2 h-5 w-5 " />
+        
       </Button>
                         </div>
                         

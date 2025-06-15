@@ -99,7 +99,7 @@ export const useAuthStore = create((set) => ({
 	sendEmailTemplate: async (html, plainText) => {
 		set({ isLoading: true, error: null });
 		try {
-			const response = await axios.post(`http://localhost:5000/api/auth/send-emailtemplate`, { html, plainText });
+			const response = await axios.post(`/api/auth/send-emailtemplate`, { html, plainText });
 			set({ message: response.data.message, isLoading: false });
 		} catch (error) {
 			set({

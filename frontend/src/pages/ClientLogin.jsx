@@ -18,7 +18,7 @@ const handlelogin = async () => {
   try {
      
 
-    const response = await fetch(`http://localhost:5000/api/clients/login/${clientCode}/${staticcode}`, {
+    const response = await fetch(`/api/clients/login/${clientCode}/${staticcode}`, {
       method: 'GET'
     });
 

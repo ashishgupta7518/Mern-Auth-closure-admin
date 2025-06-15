@@ -24,7 +24,7 @@ const MakerChecker = () => {
 
   const downloadalldata = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/excel/download", {
+      const response = await fetch(`/api/excel/download`, {
         method: "GET",
       });
 
@@ -53,7 +53,7 @@ const MakerChecker = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/clients");
+        const res = await fetch(`/api/clients`);
         const data = await res.json();
         setClients(data);
       } catch (err) {

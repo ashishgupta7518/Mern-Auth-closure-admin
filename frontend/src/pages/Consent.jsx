@@ -13,7 +13,7 @@ const ClientLogin = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(`http://localhost:5000/api/clients/${clientcode}`);
+                const res = await fetch(`/api/clients/${clientcode}`);
                 const data = await res.json();
                 setclientdata(data);
                 console.log("Fetched client data:", data);

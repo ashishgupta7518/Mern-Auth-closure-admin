@@ -70,6 +70,7 @@ const handlelogin = async () => {
                 id="clientCode"
                 name="clientCode"
                 value={clientCode}
+                placeholder="Enter your client code"
                 onChange={(e) => setClientCode(e.target.value)}
                 required
                 autoComplete="off"
@@ -86,6 +87,7 @@ const handlelogin = async () => {
                 id="staticcode"
                 name="staticcode"
                 value={staticcode}
+                placeholder="Enter your unique code"
                 onChange={(e) => setstaticcode(e.target.value)}
                 required
                 autoComplete="off"

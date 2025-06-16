@@ -20,7 +20,7 @@ const MakerChecker = () => {
     "networth",
     "aadhar_no",
     "stage",
-    "mobile_no",
+    "mobile_number",
     "father_name",
   ];
 
